@@ -228,6 +228,12 @@ section[id],main[id]{scroll-margin-top:4.5rem}
 .press-list a{display:block;padding:.6rem 0;font-family:var(--display);font-stretch:108%;font-weight:600;font-size:.98rem;text-decoration:none}
 .press-list a::after{content:" ↗";color:var(--muted);font-weight:400}
 
+.side-project{display:grid;grid-template-columns:minmax(0,1fr) 15rem;gap:1.25rem clamp(1.5rem,4vw,3.5rem);padding:clamp(1.1rem,2.6vw,1.6rem);border:1px dashed var(--rule);border-radius:6px}
+@media (max-width:760px){.side-project{grid-template-columns:minmax(0,1fr)}}
+.side-project h4{margin:.45rem 0 .5rem;font-family:var(--display);font-stretch:110%;font-weight:700;font-size:1.2rem;line-height:1.2}
+.side-project p:not(.kicker){margin:0;max-width:62ch}
+.pill{display:inline-block;padding:.1rem .5rem;border-radius:999px;border:1px solid currentColor;color:var(--accent);letter-spacing:.06em}
+
 /* Credits */
 .credits{list-style:none;margin:0;padding:0}
 .credits > li{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:.4rem 2rem;padding-block:1.5rem;border-top:1px solid var(--rule)}
@@ -296,7 +302,7 @@ section[id],main[id]{scroll-margin-top:4.5rem}
     <div class="hero-grid">
       <div class="intro">
         <p class="lede">I build the systems music teams run on, and I produce the shows they put on stage.</p>
-        <p>I'm an MFA candidate in Creative Arts Programming at CalArts, graduating May 2027, with a BS in Music Industry from USC. At Sound Factory Records I built the Airtable operating system the whole label works in, with Spotify and social data flowing in automatically. In August 2026 I produced a sold-out Hokkien music concert for more than 1,300 people in Huizhou, China.</p>
+        <p>I'm an MFA candidate in Creative Arts Programming at CalArts, graduating May 2027, with a BS in Music Industry from USC. At Sound Factory Records I built the Airtable operating system the whole label works in, with Spotify and social data flowing in automatically. I'm now developing a C++ convolution reverb plugin of the studio's Live Room B. In August 2026 I produced a full-house Hokkien music concert for more than 1,300 people in Huizhou, China.</p>
         <p>My background runs through music publishing, A&amp;R research, film and TV sync, paid social and game audio. I work in Chinese and English.</p>
         <div class="actions">
           <a class="btn primary" href="#contact">Get in touch</a>
@@ -321,7 +327,7 @@ section[id],main[id]{scroll-margin-top:4.5rem}
     </div>
 
     <ul class="proof" aria-label="Highlights">
-      <li><b>Sold out</b><span>1,300-plus-seat concert I produced and co-hosted, Huizhou 2026</span></li>
+      <li><b>Full house</b><span>1,300-plus seats at a free, donation-funded concert I produced and co-hosted, Huizhou 2026</span></li>
       <li><b>~8 people</b><span>run Sound Factory Records on the Airtable system I built</span></li>
       <li><b>3–4 h → 45–60 min</b><span>A&amp;R evaluation time per artist with my scoring model</span></li>
       <li><b>Gold Prize</b><span>Tencent Game Awards 2025 (University Track) for Myth of Lumi, which I composed for</span></li>
@@ -350,7 +356,7 @@ section[id],main[id]{scroll-margin-top:4.5rem}
             <div><dt>Role</dt><dd>Operations &amp; Workflow Coordinator, promoted from Marketing Intern</dd></div>
             <div><dt>Period</dt><dd>Jan 2026 – present</dd></div>
             <div><dt>Used by</dt><dd>The full label team, about 8 people</dd></div>
-            <div><dt>Built with</dt><dd>Airtable, Python, Claude API, Airtable Automations</dd></div>
+            <div><dt>Built with</dt><dd>Airtable, Python, Claude API, Airtable Automations; C++ for the reverb plugin</dd></div>
           </dl>
           <ul class="points">
             <li>Six linked tables: Artists, Releases, Sessions, Contacts, Budget Line Items and Budgets. Rollups carry each expense into spend per artist, actual spend per release, and budget remaining.</li>
@@ -446,6 +452,17 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
     '🟢 Under Budget'))</code></pre>
           <figcaption>How the base fits together. Platform data comes in through automation, the six tables are linked by record, and each person works from the view they need. The formula above drives the budget-health flag.</figcaption>
         </figure>
+        <aside class="side-project" aria-labelledby="c1b">
+          <div>
+            <p class="kicker">Also at Sound Factory · <span class="pill">In development</span></p>
+            <h4 id="c1b">Live Room B, as a plugin</h4>
+            <p>I'm developing an in-house convolution reverb plugin in C++ that recreates the sound of the studio's Live Room B. It will be built from impulse responses captured at several source positions in the room. Recording those impulse responses is the next step.</p>
+          </div>
+          <dl class="meta">
+            <div><dt>Tools</dt><dd>C++, convolution, impulse responses</dd></div>
+            <div><dt>Status</dt><dd>In development</dd></div>
+          </dl>
+        </aside>
       </article>
 
       <!-- Case 2 -->
@@ -453,14 +470,14 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
         <header>
           <p class="kicker">Hokkien Music &amp; Culture · Concert in Huizhou, China</p>
           <h3 id="c2">A full house for Hokkien song</h3>
-          <p class="dek">I founded an organization to preserve and promote Hokkien culture through music. After two international songwriting competitions and a first tour concert in Boston, I produced a concert of the winning songs at the Opera House of the Huizhou Culture and Art Center. It sold out, and all 1,300-plus seats were filled.</p>
+          <p class="dek">I founded an organization to preserve and promote Hokkien culture through music. After two international songwriting competitions and a first tour concert in Boston, I produced a concert of the winning songs at the Opera House of the Huizhou Culture and Art Center. Admission was free and donation-funded. Tickets ran out the moment they were released, and all 1,300-plus seats were filled.</p>
         </header>
         <div class="case-body">
           <dl class="meta">
             <div><dt>Role</dt><dd>Founder and executive producer; co-host (MC) with Long Feng; wrote the press release</dd></div>
             <div><dt>Period</dt><dd>2023 – present</dd></div>
-            <div><dt>Concert</dt><dd>August 21, 2026, Opera House, Huizhou Culture and Art Center. Sold out and streamed live worldwide.</dd></div>
-            <div><dt>On stage</dt><dd>Singers and heritage performers across three generations, a women's chorus and an eight-piece band, in 19 songs</dd></div>
+            <div><dt>Concert</dt><dd>August 21, 2026, Opera House, Huizhou Culture and Art Center. Free admission, funded by donations. Full house, streamed live worldwide.</dd></div>
+            <div><dt>On stage</dt><dd>A 19-song program with 10+ professional vocalists, a fishing-song heritage troupe, a 40-member women's choir and an 8-piece live band</dd></div>
             <div><dt>Partner</dt><dd>Boston Chinese Musicians Association</dd></div>
           </dl>
           <ol class="timeline">
@@ -473,7 +490,7 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
         </div>
         <figure class="fig">
           <div class="seat-stat">
-            <p class="big" style="margin:0">Sold out <small>1,300-plus seats</small></p>
+            <p class="big" style="margin:0">Full house <small>1,300-plus seats</small></p>
             <p class="kicker">Huizhou · August 21, 2026</p>
           </div>
           <div class="seats">
@@ -744,7 +761,7 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
         <div>
           <p class="kicker">In code</p>
           <h3>Creative Arts Programming</h3>
-          <p>At CalArts I work in Max/MSP, TouchDesigner and Unreal Engine, with coursework in audio plugin development, music information retrieval, statistical AI and deep learning for media.</p>
+          <p>At CalArts I work in Max/MSP, TouchDesigner and Unreal Engine, with coursework in audio plugin development, music information retrieval, statistical AI and deep learning for media. I'm putting the plugin work to use at Sound Factory, where I'm building a convolution reverb of the studio's Live Room B in C++.</p>
         </div>
       </div>
 
@@ -754,7 +771,7 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
         <div><h4>Music business</h4><p>Catalog management, metadata, publishing splits, PRO databases, sync licensing coordination, DISCO, A&amp;R research, artist evaluation</p></div>
         <div><h4>Audience &amp; marketing</h4><p>Paid social on Meta, Google and TikTok, audience segmentation, lookalike audiences, streaming and campaign analytics</p></div>
         <div><h4>Live production</h4><p>Artist booking, venue negotiation, program curation, contract drafting, program book design, press release writing and distribution, hosting (MC)</p></div>
-        <div><h4>Audio &amp; creative technology</h4><p>Game music composition, sound design, recording engineering, Max/MSP, TouchDesigner, Unreal Engine, Photoshop, Canva. Coursework in C++ audio plugins, machine learning and music information retrieval.</p></div>
+        <div><h4>Audio &amp; creative technology</h4><p>Pro Tools, Logic Pro, Adobe Audition, game music composition, sound design, recording engineering, C++ (audio plugin development), Max/MSP, TouchDesigner, Unreal Engine, Photoshop, Canva. Coursework in machine learning and music information retrieval.</p></div>
         <div><h4>Languages</h4><p>Chinese (native), English (fluent)</p></div>
       </div>
     </div>
