@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Jiayu (Kitty) Huang: music operations, data systems, live production and game audio. MFA candidate at CalArts, based in Los Angeles.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khuangqinyan.github.io/">
+<meta property="og:title" content="Jiayu (Kitty) Huang">
+<meta property="og:description" content="Jiayu (Kitty) Huang: music operations, data systems, live production and game audio. MFA candidate at CalArts, based in Los Angeles.">
+<meta property="og:image" content="https://khuangqinyan.github.io/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://khuangqinyan.github.io/">
 <title>Jiayu (Kitty) Huang</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -234,6 +243,12 @@ section[id],main[id]{scroll-margin-top:4.5rem}
 .side-project p:not(.kicker){margin:0;max-width:62ch}
 .pill{display:inline-block;padding:.1rem .5rem;border-radius:999px;border:1px solid currentColor;color:var(--accent);letter-spacing:.06em}
 
+.proof a{display:grid;gap:.3rem;color:inherit;text-decoration:none}
+.proof a:hover b{color:var(--accent)}
+.fig video,.card-video{display:block;width:100%;height:auto;max-width:100%;border-radius:6px;background:var(--night)}
+.card-video{margin-top:1rem}
+.series{margin:0 0 1rem;font-family:var(--mono);font-size:.75rem;letter-spacing:.04em;color:var(--accent)}
+
 /* Credits */
 .credits{list-style:none;margin:0;padding:0}
 .credits > li{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:.4rem 2rem;padding-block:1.5rem;border-top:1px solid var(--rule)}
@@ -287,6 +302,7 @@ section[id],main[id]{scroll-margin-top:4.5rem}
       <a href="#work">Work</a>
       <a href="#credits">Credits</a>
       <a href="#about">About</a>
+      <a href="Jiayu_Huang_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -305,9 +321,10 @@ section[id],main[id]{scroll-margin-top:4.5rem}
         <p>I'm an MFA candidate in Creative Arts Programming at CalArts, graduating May 2027, with a BS in Music Industry from USC. At Sound Factory Records I built the Airtable operating system the whole label works in, with Spotify and social data flowing in automatically. I'm now developing a C++ convolution reverb plugin of the studio's Live Room B. In August 2026 I produced a full-house Hokkien music concert for more than 1,300 people in Huizhou, China.</p>
         <p>My background runs through music publishing, A&amp;R research, film and TV sync, paid social and game audio. I work in Chinese and English.</p>
         <div class="actions">
-          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn primary" href="Jiayu_Huang_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
           <a class="btn" href="https://www.linkedin.com/in/kitty-huang-702635220/" target="_blank" rel="noopener">LinkedIn ↗</a>
-                  </div>
+          <a class="btn" href="#contact">Email</a>
+        </div>
       </div>
 
       <aside class="record" aria-label="Profile summary">
@@ -317,7 +334,7 @@ section[id],main[id]{scroll-margin-top:4.5rem}
         </div>
         <dl>
           <dt>Based in</dt><dd>Los Angeles, CA</dd>
-          <dt>Now</dt><dd>Operations &amp; Workflow Coordinator, Sound Factory Records</dd>
+          <dt>Now</dt><dd>Operations &amp; Workflow Coordinator, Sound Factory Records. Next up: recording impulse responses for the Live Room B plugin.</dd>
           <dt>Studying</dt><dd>MFA, Creative Arts Programming, CalArts (May 2027)</dd>
           <dt>Seeking</dt><dd>Full-time roles from June 2027. Part-time roles in Los Angeles for Spring 2027.</dd>
           <dt>Focus</dt><dd>Label and music operations, live events, A&amp;R and music data</dd>
@@ -327,10 +344,10 @@ section[id],main[id]{scroll-margin-top:4.5rem}
     </div>
 
     <ul class="proof" aria-label="Highlights">
-      <li><b>Full house</b><span>1,300-plus seats at a free, donation-funded concert I produced and co-hosted, Huizhou 2026</span></li>
-      <li><b>~8 people</b><span>run Sound Factory Records on the Airtable system I built</span></li>
-      <li><b>3–4 h → 45–60 min</b><span>A&amp;R evaluation time per artist with my scoring model</span></li>
-      <li><b>Gold Prize</b><span>Tencent Game Awards 2025 (University Track) for Myth of Lumi, which I composed for</span></li>
+      <li><a href="#c2"><b>Full house</b><span>1,300-plus seats at a free, donation-funded concert I produced and co-hosted, Huizhou 2026</span></a></li>
+      <li><a href="#c1"><b>~8 people</b><span>run Sound Factory Records on the Airtable system I built</span></a></li>
+      <li><a href="#c3"><b>3–4 h → 45–60 min</b><span>A&amp;R evaluation time per artist with my scoring model</span></a></li>
+      <li><a href="#c4"><b>Gold Prize</b><span>Tencent Game Awards 2025 (University Track), won by the Myth of Lumi team I composed for</span></a></li>
     </ul>
   </section>
 
@@ -459,8 +476,9 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
             <p>I'm developing an in-house convolution reverb plugin in C++ that recreates the sound of the studio's Live Room B. It will be built from impulse responses captured at several source positions in the room. Recording those impulse responses is the next step.</p>
           </div>
           <dl class="meta">
-            <div><dt>Tools</dt><dd>C++, convolution, impulse responses</dd></div>
             <div><dt>Status</dt><dd>In development</dd></div>
+            <div><dt>Approach</dt><dd>C++ convolution reverb from impulse responses captured at several source positions in the room</dd></div>
+            <div><dt>Next</dt><dd>Record the impulse responses</dd></div>
           </dl>
         </aside>
       </article>
@@ -475,11 +493,13 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
         <div class="case-body">
           <dl class="meta">
             <div><dt>Role</dt><dd>Founder and executive producer; co-host (MC) with Long Feng; wrote the press release</dd></div>
-            <div><dt>Period</dt><dd>2023 – present</dd></div>
+            <div><dt>Scale</dt><dd>A 19-song program with 10+ professional vocalists, a fishing-song heritage troupe, a 40-member women's choir and an 8-piece live band</dd></div>
             <div><dt>Concert</dt><dd>August 21, 2026, Opera House, Huizhou Culture and Art Center. Free admission, funded by donations. Full house, streamed live worldwide.</dd></div>
-            <div><dt>On stage</dt><dd>A 19-song program with 10+ professional vocalists, a fishing-song heritage troupe, a 40-member women's choir and an 8-piece live band</dd></div>
             <div><dt>Partner</dt><dd>Boston Chinese Musicians Association</dd></div>
+            <div><dt>Period</dt><dd>2023 – present</dd></div>
           </dl>
+          <div>
+          <p class="series">Concert series: Boston (Jan 2025) → Huizhou (Aug 2026)</p>
           <ol class="timeline">
             <li><time datetime="2023">2023</time><p>Founded Hokkien Music &amp; Culture in Los Angeles, working in music publishing and artist development for Hokkien-language songs.</p></li>
             <li><time datetime="2024">2024</time><p>Launched the Global Hokkien Songwriting Competition with the Boston Chinese Musicians Association. Coordinated songwriters from around the world and managed submissions and rights paperwork.</p></li>
@@ -487,17 +507,8 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
             <li><time datetime="2025">2025</time><p>Ran the competition's second edition.</p></li>
             <li><time datetime="2026-08-21">Aug 2026</time><p>Produced the Huizhou concert end to end: artist booking, venue negotiation, program curation and review, contracts, promotional content, the program book and the press release, and co-hosted on stage with Long Feng. It was streamed live worldwide.</p></li>
           </ol>
+          </div>
         </div>
-        <figure class="fig">
-          <div class="seat-stat">
-            <p class="big" style="margin:0">Full house <small>1,300-plus seats</small></p>
-            <p class="kicker">Huizhou · August 21, 2026</p>
-          </div>
-          <div class="seats">
-            <canvas id="seat-canvas" role="img" aria-label="Seating chart in which every seat is filled"></canvas>
-          </div>
-          <figcaption>Each dot stands for one seat. The seating layout is illustrative.</figcaption>
-        </figure>
         <div class="evidence">
           <figure class="fig book">
             <div class="book-pages">
@@ -516,6 +527,16 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
             <p class="links"><a href="https://www.prnewswire.com/news-releases/a-voice-across-the-world-hokkien-music--culture-concert-gives-new-voice-to-a-thousand-year-old-tradition-heritage-302864792.html" target="_blank" rel="noopener">Read the release ↗</a></p>
           </div>
         </div>
+        <figure class="fig">
+          <div class="seat-stat">
+            <p class="big" style="margin:0">Full house <small>1,300-plus seats</small></p>
+            <p class="kicker">Huizhou · August 21, 2026</p>
+          </div>
+          <div class="seats">
+            <canvas id="seat-canvas" role="img" aria-label="Seating chart in which every seat is filled"></canvas>
+          </div>
+          <figcaption>Each dot stands for one seat. The seating layout is illustrative.</figcaption>
+        </figure>
       </article>
 
       <!-- Case 3 -->
@@ -607,7 +628,7 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
             <div><dt>Developer</dt><dd>Luminara Games, a student team in the USC Games Advanced Games Project</dd></div>
             <div><dt>Released</dt><dd>August 29, 2025, free on Steam</dd></div>
             <div><dt>Shown at</dt><dd>USC Games Expo 2025</dd></div>
-            <div><dt>Award</dt><dd>Tencent Game Awards 2025, Gold Prize (University Track)</dd></div>
+            <div><dt>Award</dt><dd>Tencent Game Awards 2025, Gold Prize (University Track), awarded to the Luminara Games team</dd></div>
           </dl>
           <div class="case-text">
             <ul class="points">
@@ -619,12 +640,12 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
             <div class="awards">
               <p class="kicker">Awards</p>
               <ul class="award-list">
-                <li><b>Gold Prize, University Track</b> · Tencent Game Awards 2025</li>
+                <li><b>Gold Prize, University Track</b> · Tencent Game Awards 2025 · team award</li>
               </ul>
             </div>
             <p class="links">
               <a href="https://www.youtube.com/watch?v=00mFUB37Bik" target="_blank" rel="noopener">Official trailer ↗</a>
-              <a href="https://video.wixstatic.com/video/7b8704_12991770a040421b9d6138f6377a95ce/1080p/mp4/file.mp4" target="_blank" rel="noopener">Score demo ↗</a>
+              <a href="#lumi-demo">Music system demo ↓</a>
               <a href="https://store.steampowered.com/app/3518380/Myth_of_Lumi/" target="_blank" rel="noopener">Steam ↗</a>
             </p>
           </div>
@@ -632,6 +653,12 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
         <figure class="fig">
           <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/00mFUB37Bik" title="Myth of Lumi official trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
           <figcaption>Official trailer, published by GameTrailers on May 13, 2025 for USC Games Expo 2025.</figcaption>
+        </figure>
+        <figure class="fig" id="lumi-demo">
+          <video controls preload="none" playsinline width="1280" height="720" poster="media/lumi_poster.jpg">
+            <source src="media/lumi.mp4" type="video/mp4">
+          </video>
+          <figcaption>Music system demo, 3:29, captured from an early prototype. The music follows each phase of a duel: the player's turn (drawing cards, summoning a Lumi), then the boss's turn. The last section is a preparation-room cue I composed from concept art while the game was still in development.</figcaption>
         </figure>
       </article>
 
@@ -649,9 +676,11 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
           <h3>Shutter Leap</h3>
           <p class="role">Co-creator with Natalie Chang: composer, designer, narrative designer and artist</p>
           <p class="desc">A short 2D puzzle game in which a detective uncovers the secrets of a traditional East Asian village lost in time. The village music features xiao, erhu and guzheng.</p>
+          <video class="card-video" controls preload="none" playsinline width="1280" height="720" poster="media/shutter_poster.jpg" aria-label="Shutter Leap music demo, 3:00">
+            <source src="media/shutter.mp4" type="video/mp4">
+          </video>
           <p class="links">
             <a href="https://natnatichang.itch.io/shutter-leap" target="_blank" rel="noopener">Play in the browser on itch.io ↗</a>
-            <a href="https://video.wixstatic.com/video/7b8704_a6d9295207ce4a208073c961050fd3bf/1080p/mp4/file.mp4" target="_blank" rel="noopener">Music demo ↗</a>
           </p>
         </article>
       </div>
@@ -793,7 +822,7 @@ IF(<span class="f">{Total Actual Spend}</span> &gt; <span class="f">{Total Budge
       <span>Los Angeles, CA</span>
     </div>
     <div class="foot">
-      <span>© 2026 Jiayu (Kitty) Huang</span>
+      <span>© 2026 Jiayu (Kitty) Huang · Last updated November 2026</span>
       
     </div>
   </div>
